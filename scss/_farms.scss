@@ -1,0 +1,24 @@
+#farms {
+    background-color: $light;
+    padding: 5rem 0;
+
+    h2 {
+        color: $dark;
+        font-weight: 700;
+    }
+
+    .card {
+        border: none;
+        box-shadow: 0 4px 10px rgba($dark, 0.1);
+
+        .card-title {
+            color: $dg;
+            font-weight: 700;
+        }
+
+        .card-text {
+            color: rgba($dark, 0.8);
+            font-size: 0.9rem;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+#hero{
+    background: url('images/head.png') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $light;
+
+    h1 {
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        letter-spacing: 2px;
+    }
+
+    .btn {
+        background-color: $dg;
+        border: none;
+        padding: 0.8rem 2.5rem;
+        font-weight: 600;
+        &:hover { background-color: $lg; }
+    }
+}

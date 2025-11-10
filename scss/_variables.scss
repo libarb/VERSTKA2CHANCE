@@ -1,0 +1,42 @@
+$dg:#627425; // Акцентный зеленый
+$mg:#ADAE56; // Основной зеленый
+$lg:#989C30; // Дополнительный зеленый
+$accent:#cc9f60; // Акцентный
+$dark:#2A170E; // Темный
+$light:#F9F6F2; // ФонЫ
+
+$theme-colors: (
+    "dg": $dg,
+    "mg": $mg,
+    "lg": $lg,
+    "dark": $dark,
+    "light": $light
+);
+$grid-breakpoints: (
+  xs: 0,
+  sm: 376px, 
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1320px 
+);
+@font-face{
+  font-family: 'OKUDA';
+  src: url(fonts/OKUDA.TTF);
+  font-weight: 400 
+}
+
+@font-face{
+  font-family: 'BEBAS';
+  src: url(fonts/BEBAS.TTF);
+  font-weight: 700 
+}
+
+$font-main: 'BEBAS';
+$font-secondary: 'OKUDA';

@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-main;
+    background-color: $light;
+    color: $dark;
+    text-transform: uppercase;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: $dark;
+    letter-spacing: 1px;
+}
+
+p {
+    color: rgba($dark, 0.85);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+a {
+    color: $dg;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover {
+        color: $lg;
+    }
+}
+// btns
+.btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    &.btn-primary,
+    &.btn-success {
+        background-color: $dg;
+        border: none;
+        color: $light;
+        &:hover {
+            background-color: $lg;
+        }
+    }
+    &.btn-outline-success {
+        border: 2px solid $dg;
+        color: $dg;
+        &:hover {
+            background-color: $dg;
+            color: $light;
+        }
+    }
+}
+
+
+.container {
+    max-width: map-get($container-max-widths, xl);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section {
+    padding: 5rem 0;
+    @media (max-width: map-get($grid-breakpoints, md)) {
+        padding: 3rem 0;
+    }
+}
+//up up up
+#toTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: $dg;
+    color: $light;
+    border: none;
+    font-size: 1.5rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+        background-color: $lg;
+    }
+
+    &.show {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $mg;
+}
+::-webkit-scrollbar-track {
+    background-color: $light;
+}

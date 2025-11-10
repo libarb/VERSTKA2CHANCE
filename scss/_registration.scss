@@ -1,0 +1,23 @@
+#registration {
+    background-color: $light;
+    padding: 5rem 0;
+
+    h2 {
+        color: $dark;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    form {
+        background-color: #fff;
+        box-shadow: 0 5px 15px rgba($dark, 0.1);
+        padding: 2rem;
+    }
+
+    .btn {
+        background-color: $dg;
+        border: none;
+        &:hover { background-color: $lg; }
+    }
+}

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMEAT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="56">
+
+    <header>
+        <nav class="navbar navbar-expand-md bg-light fixed-top py-3 shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-3 text-success" href="#hero">FARMEAT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                    <ul class="navbar-nav text-uppercase fw-semibold">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Домой</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#subscriptions">Подписка</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#masterclasses">Мастер-классы</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#products">Акции</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#farms">Поставщики</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#qna">О нас</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#products">Заказ</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-md-flex align-items-center gap-3">
+                    <span class="text-dark fw-semibold">+7 000 000 00 00</span>
+                    <a href="#" class="btn btn-outline-success btn-sm">Вход</a>
+                    <button class="btn btn-success btn-sm">Корзина</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section id="hero" class="vh-100 bg-image d-flex flex-column justify-content-center align-items-center text-center"
+        style="background-image:url('images/head.png'); background-size:cover; background-position: center;">
+        <div class="container">
+            <a href="#products" class="btn btn-success btn-lg mt-4">МЕСЯЦ ЗДОРОВЫХ ПРОДУКТОВ ДЛЯ ВАШЕЙ СЕМЬИ</a>
+        </div>
+    </section>
+
+
+    <section id="products" class="products-section py-5">
+        <div class="container">
+            <ul class="nav nav-tabs justify-content-center mb-4" id="productTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="all" type="button">все продукты</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="new-tab" data-bs-toggle="tab" data-bs-target="new" type="button">новинки</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="hits-tab" data-bs-toggle="tab" data-bs-target="hits" type="button">хиты</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="ready-tab" data-bs-toggle="tab" data-bs-target="ready" type="button">готовая еда</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="frozen-tab" data-bs-toggle="tab" data-bs-target="frozen" type="button">заморозка</button>
+                </li>
+            </ul>
+            
+            <div class="row">
+                <div class="col-lg-3 mb-4 mb-lg-0">
+
+                    <h2 class="mb-3">КАТЕГОРИИ</h2>
+
+                    <div class="list-group category-filters">
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="vegies">ОВОЩИ</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="fruits">ФРУКТЫ</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="fish">РЫБА</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="meat">МЯСО</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="milk">МОЛОЧНЫЕ ПРОДУКТЫ</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="eggs">ЯЙЦА</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="bakery">ВЫПЕЧКА</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="mushrooms">ГРИБЫ</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="bebe">НАПИТКИ</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="jams">ЗАКРУТКИ</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="cons">КОНСЕРВЫ</a>
+                    </div>
+                    <br>
+                    <h2 class="mb-3">ДИЕТА</h2>
+
+                    <div class="list-group category-filters">
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="vegan">ВЕГАН</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="nolact">БЕЗ ЛАКТОЗЫ</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="allergy">АЛЛЕРГИИ</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="post">ПОСТ</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="halal">ХАЛЯЛЬ</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-filter="kosher">КОШЕР</a>
+                    </div>
+                    <br>
+                    <a href="#" id="resetFilters" class="btn btn-outline-secondary w-100 mt-3">СБРОСИТЬ ФИЛЬТРЫ</a>
+
+                </div>
+                
+                <div class="col-lg-9">
+
+                    <div class="tab-content" id="productTabsContent">
+
+                        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+            
+                            <div class="row product-list g-4" id="product-list">
+                                <div class="col-md-4 col-sm-6 product-item" data-category="fish" data-filter="frozen">
+                                    <div class="card h-100 shadow-sm border-0"><img src="images/products/semga.png" class="card-img-top" alt="Семга">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">СЕМГА</h5>
+                                            <p class="card-text text-muted">РЫБА СЫРАЯ, 500Г</p>
+                                            <p class="fs-4 fw-bold text-primary">400</p>
+                                            <button class="btn btn-primary w-100 ">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-6 product-item" data-category="fruits" data-filter="hits">
+                                    <div class="card h-100 shadow-sm border-0"><img src="images/products/apple.png" class="card-img-top" alt="ЯБЛОКИ">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">ГРЕННИ СМИТ</h5>
+                                            <p class="card-text text-muted">ЯБЛОКИ, 1КГ</p>
+                                            <p class="fs-4 fw-bold text-primary">210</p>
+                                            <button class="btn btn-primary w-100">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-4 col-sm-6 product-item" data-category="milk" data-filter="#new">
+                                    <div class="card h-100 shadow-sm border-0"><img src="images/products/cheese.png" class="card-img-top" alt="СЫР">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">ПАРМЕЗАН</h5>
+                                            <p class="card-text text-muted">СЫР ФЕРМЕРСКИЙ, 200Г</p>
+                                            <p class="fs-4 fw-bold text-primary">160</p>
+                                            <button class="btn btn-primary w-100">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-4 col-sm-6 product-item" data-category="bebe" data-filter="ready">
+                                    <div class="card h-100 shadow-sm border-0"><img src="images/products/juice.png" class="card-img-top" alt="СОК">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">АПЕЛЬСИН ФРЭШ</h5>
+                                            <p class="card-text text-muted">СВЕЖЕВЫЖАТЫЙ, 1,5Л</p>
+                                            <p class="fs-4 fw-bold text-primary">200</p>
+                                            <button class="btn btn-primary w-100">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 product-item" data-category="vegies" data-filter="hits">
+                                    <div class="card h-100 shadow-sm border-0"><img src="images/products/pumpkin.png" class="card-img-top" alt="ТЫКВА">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">ТЫКВА</h5>
+                                            <p class="card-text text-muted">СЫРАЯ, 1КГ</p>
+                                            <p class="fs-4 fw-bold text-primary">350</p>
+                                            <button class="btn btn-primary w-100">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 product-item" data-category="fruits" data-filter="frozen">
+                                    <div class="card h-100 shadow-sm border-0"><img src="images/products/blueberry.png" class="card-img-top" alt="ГОЛУБИКА">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">ГОЛУБИКА</h5>
+                                            <p class="card-text text-muted">ЗАМОРОЖЕННАЯ, 500Г</p>
+                                            <p class="fs-4 fw-bold text-primary">300</p>
+                                            <button class="btn btn-primary w-100">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 product-item" data-category="vegies" data-filter="ready">
+                                    <div class="card h-100 shadow-sm border-0"><img src="images/products/cucumber.png" class="card-img-top" alt="КУКАРАЧАС">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">ОГУРЦЫ</h5>
+                                            <p class="card-text text-muted">БАКИНСКИЕ, 1КГ</p>
+                                            <p class="fs-4 fw-bold text-primary">200</p>
+                                            <button class="btn btn-primary w-100">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 product-item" data-category="mushrooms" data-filter="new">
+                                    <div class="card h-100 shadow-sm border-0"><img src="images/products/shrooms.png" class="card-img-top" alt="ГРИБЫ">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">ШАМПИНЬОНЫ</h5>
+                                            <p class="card-text text-muted">СЫРЫЕ, 300Г</p>
+                                            <p class="fs-4 fw-bold text-primary">330</p>
+                                            <button class="btn btn-primary w-100">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 product-item" data-category="vegies" data-filter="new">
+                                    <div class="card h-100 shadow-sm border-0"><img src="images/products/corn.png" class="card-img-top" alt="КОРН">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">КУКУРУЗА СЛАДКАЯ</h5>
+                                            <p class="card-text text-muted">НЕОЧИЩЕННАЯ, 500Г</p>
+                                            <p class="fs-4 fw-bold text-primary">270</p>
+                                            <button class="btn btn-primary w-100">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="new" role="tabpanel" aria-labelledby="new-tab"></div>
+
+                        <div class="tab-pane fade" id="hits" role="tabpanel" aria-labelledby="hits-tab"></div>
+
+                        <div class="tab-pane fade" id="ready" role="tabpanel" aria-labelledby="ready-tab"></div>
+
+                        <div class="tab-pane fade" id="frozen" role="tabpanel" aria-labelledby="frozen-tab"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">Товар добавлен в корзину!</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="masterclasses" class="masterclasses-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 text-dark">ПОСЛЕДНИЕ МАСТЕР-КЛАССЫ</h2>
+            
+            <div id="masterclassCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <h3 class="text-primary">СОФЬЯ ВОХТОМИНА НАУЧИТ ГОТОВИТЬ ЛАЗАНЬЮ ПО РЕЦЕПТУ СВОЕЙ БАБУШКИ</h3>
+                        <p class="text-muted mt-3">“ВЫ БУДЕТЕ В ТАКОМ ЖЕ ВОСТОРГЕ, В КАКОМ БЫЛА И Я...”</p>
+                        <a href="#subscriptions" class="btn btn-secondary">ДОСТУПНО ПО ПОДПИСКЕ</a>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <h3 class="text-primary">УДИВИТЕ СВОИХ БЛИЗКИХ ШАРЛОТКОЙ ПО РЕЦЕПТУ ВСЕВОЛОДА БЕЛЯЕВА</h3>
+                        <p class="text-muted mt-3">“Я ПРЕДПОЧИТАЮ ДОБАВЛЯТЬ БОЛЬШЕ КОРИЦЫ, ПОПРОБУЙТЕ...”</p>
+                        <a href="#subscriptions" class="btn btn-secondary">ДОСТУПНО ПО ПОДПИСКЕ</a>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <h3 class="text-primary">НЕВЕРОЯТНО АППЕТИТНОЕ ЖАРКОЕ ПРЕДСТАВЛЯЕТ АЛЕКСЕЙ ТРОШИН</h3>
+                        <p class="text-muted mt-3">“БОЛЬШЕ ПЕРЦА... И ДОБАВЬТЕ ПЕРЦА... ПЕРЕЦ...”</p>
+                        <a href="#subscriptions" class="btn btn-secondary">ДОСТУПНО ПО ПОДПИСКЕ</a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#masterclassCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#masterclassCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+                
+        </div>
+    </section>
+
+    <section id="subscriptions" class="subscriptions-section py-5">
+        <div class="container-xl text-center">
+            <h2 class="mb-4 text-dark">ПОДПИСКИ</h2>
+            <div class="row g-4 mt-4">
+                <div class="col-md-4 col-sm-6 product-item" data-category="vegies" data-filter="new">
+                            <div class="card h-100 shadow-sm border-0"><img src="images/subc/for1.png" class="card-img-top" alt="КОРН">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">ДЛЯ ОДНОГО</h5>
+                                    <button class="btn btn-primary w-100">ОТ 5000/МЕС</button>
+                                </div>
+                            </div>
+                </div>
+                <div class="col-md-4 col-sm-6 product-item" data-category="vegies" data-filter="new">
+                            <div class="card h-100 shadow-sm border-0"><img src="images/subc/for2.png" class="card-img-top" alt="КОРН">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">ДЛЯ ДВОИХ</h5>
+                                    <button class="btn btn-primary w-100">ОТ 10000/МЕС</button>
+                                </div>
+                            </div>
+                </div>
+                <div class="col-md-4 col-sm-6 product-item" data-category="vegies" data-filter="new">
+                            <div class="card h-100 shadow-sm border-0"><img src="images/subc/forf.png" class="card-img-top" alt="КОРН">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">ДЛЯ СЕМЬИ</h5>
+                                    <button class="btn btn-primary w-100">ОТ 15000/МЕС</button>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="farms" class="farms-section py-5 bg-light">
+        <div class="container-xl">
+            <h2 class="text-center mb-5 text-dark">НАШИ ФЕРМЫ</h2>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/farms/dav.png" class="card-img-top img-fluid" alt="Ферма Давыдовское">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ФЕРМА ДАВЫДОВСКОЕ</h5>
+                            <p class="card-text small">ЯРОСЛАВСКАЯ ОБЛАСТЬ, БОРИСОГЛЕБСКИЙ РАЙОН, СЕЛО КОНДАКОВО</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/farms/luk.png" class="card-img-top img-fluid" alt="Ферма Лукино">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ФЕРМА ЛУКИНО</h5>
+                            <p class="card-text small">ТУЛЬСКАЯ ОБЛАСТЬ, МУНИЦИПАЛЬНОЕ ОБР АЛЕКСИН, ДЕРЕВНЯ ЛУКИНО</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/farms/bab.png" class="card-img-top img-fluid" alt="Ферма Бабушкино">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ФЕРМА БАБУШКИНО</h5>
+                            <p class="card-text small">НИЖЕГОРОДСКАЯ ОБЛАСТЬ, БОГОРОДСКИЙ ОКРГУ, СЕЛО БАБУШКИНО</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="qna" class="qna-section py-5">
+        <div class="container-xl">
+            <h2 class="text-center mb-5 text-dark">Q&A</h2>
+            <div class="accordion" id="qnaAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            КТО МЫ?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#qnaAccordion">
+                        <div class="accordion-body text-muted">
+                            ЛЮДИ ИЛИ ГНОМЫ
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            КАК СТАТЬ НАШИМ ПАРТНЕРОМ?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#qnaAccordion">
+                        <div class="accordion-body text-muted">
+                            ?????
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            КАК ЭТО РАБОТАЕТ?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#qnaAccordion">
+                        <div class="accordion-body text-muted">
+                            ВАШИМИ МОЛИТВАМИ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration" class="registration-section py-5 bg-light">
+        <div class="container-xl">
+            <h2 class="text-center mb-5 text-dark">НАЧНИТЕ ПИТАТЬСЯ ЗДОРОВО</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">ИМЯ</label>
+                            <input type="text" class="form-control" id="username" required>
+                            <div class="invalid-feedback">
+                                ПОЖАЛУЙСТА, ЗАПОЛНИТЕ ДАННОЕ ПОЛЕ.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="surname" class="form-label">ФАМИЛИЯ</label>
+                            <input type="text" class="form-control" id="surname" required>
+                            <div class="invalid-feedback">
+                                ПОЖАЛУЙСТА, ЗАПОЛНИТЕ ДАННОЕ ПОЛЕ.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">EMAIL</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="email" class="form-control" id="email" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    ПОЖАЛУЙСТА, ВВЕДИТЕ ВАШУ ДЕЙСТВУЮЩУЮ ПОЧТУ.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Я СОГЛАСЕН(НА) НА ОБРАБОТКУ МОИХ ДАННЫХ 
+                                </label>
+                                <div class="invalid-feedback">
+                                    ВЫ НЕ ПОДТВЕРДИЛИ СОГЛАСИЕ.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn btn-success w-100" type="submit">НАЧАТЬ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">            
+                <a class="mb-0">&copy; 2025 FARMEAT</a>
+                <a href="#" class="text-white">Политика конфиденциальности</a>
+                <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#loyaltyModal">Программа лояльности</button>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="loyaltyModal" tabindex="-1" aria-labelledby="loyaltyLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loyaltyLabel">Программа лояльности FARMEAT</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Получайте скидки и бонусы за покупки. Зарегистрируйтесь прямо сейчас!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-success">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">Регистрация прошла успешно!</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const toastTrigger = document.querySelectorAll('.btn.btn-success.w-100');
+        const toastLive = document.getElementById('cartToast');
+        const toast = new bootstrap.Toast(toastLive);
+        toastTrigger.forEach(btn => btn.addEventListener('click', () => toast.show()));
+    </script>
+
+    <script>
+        const toTop = document.createElement('button');
+        toTop.id = 'toTop';
+        toTop.innerHTML = 'Наверх';
+        document.body.appendChild(toTop);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+            toTop.classList.add('show');
+            } else {
+                toTop.classList.remove('show');
+            }
+        });
+
+        toTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    
+    <script>    // табы
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = document.querySelectorAll('.product-item');
+            const categoryButtons = document.querySelectorAll('.category-filters a');
+            const resetBtn = document.getElementById('resetFilters');
+
+        // Функция фильтрации
+            function applyFilter({ category = null, tab = null }) {
+                products.forEach(p => {
+                    const matchesCategory = !category || p.dataset.category === category;
+                    const matchesTab = !tab || p.dataset.filter === tab;
+                    p.style.display = matchesCategory && matchesTab ? '' : 'none';
+                });
+            }
+
+        // Клик по категории
+            categoryButtons.forEach(btn => {
+                btn.addEventListener('click', e => {
+                    e.preventDefault();
+                    categoryButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    applyFilter({ category: btn.dataset.filter });
+                });
+            });
+
+        // Переключение табов
+            document.querySelectorAll('#productTabs button[data-bs-toggle="tab"]').forEach(tabBtn => {
+                tabBtn.addEventListener('shown.bs.tab', e => {
+                    const target = e.target.getAttribute('data-bs-target').replace('#', '');
+                    categoryButtons.forEach(b => b.classList.remove('active'));
+                    if (target === 'all') {
+                        products.forEach(p => (p.style.display = ''));
+                    } else {
+                        applyFilter({ tab: target });
+                    }
+                });
+            });
+
+        // cбросить
+            resetBtn.addEventListener('click', e => {
+                e.preventDefault();
+                categoryButtons.forEach(b => b.classList.remove('active'));
+                products.forEach(p => (p.style.display = ''));
+                const allTab = document.querySelector('#all-tab');
+                bootstrap.Tab.getOrCreateInstance(allTab).show();
+            });
+        });
+    </script>
+
+    <script>    //рега
+        document.addEventListener('DOMContentLoaded', () => {
+            const forms = document.querySelectorAll('.needs-validation');
+
+            forms.forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        event.preventDefault(); // блокируем перезагрузку
+                        const toast = new bootstrap.Toast(document.getElementById('successToast'));
+                        toast.show();
+                        form.reset();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        });
+    </script>
+        
+    <script>    // корзина
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartButtons = document.querySelectorAll('.product-item .btn-primary');
+            const cartCount = document.getElementById('cart-count');
+            let count = 0;
+
+            cartButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    count++;
+                    if (cartCount) {
+                        cartCount.textContent = count;
+                        cartCount.style.display = 'inline-block';
+                    }
+
+                    const toast = new bootstrap.Toast(document.getElementById('cartToast'));
+                    toast.show();
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>

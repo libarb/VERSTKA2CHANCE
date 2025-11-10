@@ -1,0 +1,39 @@
+header {
+    .navbar {
+        background-color: $light !important;
+        border-bottom: 2px solid $mg;
+        font-family: $font-main;
+
+        .navbar-brand {
+            color: $dg !important;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .nav-link {
+            color: $dark !important;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            &:hover {
+                color: $dg !important;
+            }
+        }
+
+        .btn {
+            &.btn-success {
+                background-color: $dg;
+                border: none;
+                &:hover { background-color: $lg; }
+            }
+            &.btn-outline-success {
+                border-color: $dg;
+                color: $dg;
+                &:hover {
+                    background-color: $dg;
+                    color: $light;
+                }
+            }
+        }
+    }
+}

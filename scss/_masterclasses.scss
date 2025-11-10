@@ -1,0 +1,24 @@
+#masterclasses {
+    background-color: $light;
+    padding: 5rem 0;
+
+    h2 {
+        color: $dark;
+        font-weight: 700;
+    }
+
+    h3 {
+        color: $dg;
+        font-weight: 700;
+    }
+
+    .btn {
+        background-color: $dg;
+        &:hover { background-color: $lg; }
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(30%) sepia(50%) saturate(400%) hue-rotate(50deg);
+    }
+}

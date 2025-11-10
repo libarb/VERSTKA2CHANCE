@@ -1,0 +1,21 @@
+#qna {
+    padding: 5rem 0;
+    background-color: $light;
+
+    h2 {
+        color: $dark;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    .accordion-button {
+        background-color: $light;
+        font-weight: 600;
+        color: $dark;
+
+        &:not(.collapsed) {
+            color: $dg;
+            background-color: rgba($dg, 0.1);
+        }
+    }
+}

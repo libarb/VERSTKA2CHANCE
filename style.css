@@ -1,0 +1,382 @@
+@font-face{
+    font-family: 'OKUDA';
+    src: url(fonts/OKUDA.TTF);
+    font-weight: 400 
+}
+@font-face{
+    font-family: 'BEBAS';
+    src: url(fonts/BEBAS.TTF);
+    font-weight: 700 
+}
+
+:root {
+    --dg: #627425;
+    --mg: #ADAE56;
+    --lg: #989C30;
+    --accent: #cc9f60;
+    --dark: #2A170E;
+    --light: #F9F6F2;
+    --font-main: 'BEBAS';
+    --font-secondary: 'OKUDA';
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    background-color: var(--light);
+    color: var(--dark);
+    text-transform: uppercase;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 1px;
+}
+
+p {
+    color: rgba(42, 23, 14, 0.85);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+a {
+    color: var(--dg);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--lg);
+}
+
+.btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.btn.btn-primary,
+.btn.btn-success {
+    background-color: var(--dg);
+    border: none;
+    color: var(--light);
+}
+.btn.btn-primary:hover,
+.btn.btn-success:hover {
+    background-color: var(--lg);
+}
+.btn.btn-outline-success {
+    border: 2px solid var(--dg);
+    color: var(--dg);
+}
+.btn.btn-outline-success:hover {
+    background-color: var(--dg);
+    color: var(--light);
+}
+
+section {
+    padding: 5rem 0;
+}
+@media (max-width: 768px) {
+  section {
+        padding: 3rem 0;
+  }
+}
+
+#toTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    height: 50px;
+    background-color: var(--dg);
+    color: var(--light);
+    border: none;    
+    border-radius: 10px;
+    font-size: 1.5rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+#toTop:hover {
+    background-color: var(--lg);
+}
+#toTop.show {
+    display: flex;
+    opacity: 1;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--mg);
+}
+::-webkit-scrollbar-track {
+    background-color: var(--light);
+}
+
+header .navbar {
+    background-color: var(--light) !important;
+    border-bottom: 2px solid var(--mg);
+    font-family: var(--font-main);
+}
+header .navbar .navbar-brand {
+    color: var(--dg) !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header .navbar .nav-link {
+    color: var(--dark) !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+header .navbar .nav-link:hover {
+    color: var(--dg) !important;
+}
+header .navbar .btn {
+    border-radius: 0px;
+}
+header .navbar .btn.btn-success {
+    background-color: var(--dg);
+    border: none;
+}
+header .navbar .btn.btn-success:hover {
+    background-color: var(--lg);
+}
+header .navbar .btn.btn-outline-success {
+    border-color: var(--dg);
+    color: var(--dg);
+}
+header .navbar .btn.btn-outline-success:hover {
+    background-color: var(--dg);
+    color: var(--light);
+}
+
+#hero {
+    background: url("images/head.png") center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light);
+}
+#hero h1 {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    letter-spacing: 2px;
+}
+#hero .btn {
+    background-color: var(--dg);
+    border: none;
+    border-radius: 0px;
+    padding: 0.8rem 2.5rem;
+    font-weight: 600;
+}
+#hero .btn:hover {
+    background-color: var(--lg);
+}
+
+#products {
+    padding: 5rem 0;
+    background-color: var(--light);
+}
+#products .nav-tabs {
+    border: none;
+    justify-content: center;
+}
+#products .nav-tabs .nav-link {
+    color: var(--dark);
+    font-weight: 600;
+    border: none;
+}
+#products .nav-tabs .nav-link.active {
+    background-color: var(--mg);
+    color: var(--light);
+}
+#products .list-group-item {
+    background-color: var(--light);
+    border: none;
+    border-bottom: 1px solid rgba(42, 23, 14, 0.1);
+    transition: background 0.3s;
+}
+#products .list-group-item:hover {
+    background-color: var(--mg);
+    color: var(--light);
+}
+#products .list-group-item.active {
+    color: var(--dg);
+}
+#products .card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#products .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(42, 23, 14, 0.15);
+}
+#products .card-title {
+    color: var(--dark);
+    font-weight: 700;
+}
+#products .card .btn {
+    background-color: var(--dg);
+    font-weight: 600;
+}
+#products .card .btn:hover {
+    background-color: var(--lg);
+}
+
+#masterclasses {
+    background-color: var(--light);
+    padding: 5rem 0;
+}
+#masterclasses h2 {
+    color: var(--dark);
+    font-weight: 700;
+}
+#masterclasses h3 {
+    color: var(--dg);
+    font-weight: 700;
+}
+#masterclasses .btn {
+    background-color: var(--dg);
+}
+#masterclasses .btn:hover {
+    background-color: var(--lg);
+}
+#masterclasses .carousel-control-prev-icon,
+#masterclasses .carousel-control-next-icon {
+    filter: invert(30%) sepia(50%) saturate(400%) hue-rotate(50deg);
+}
+
+#subscriptions {
+    background-color: var(--light);
+    padding: 5rem 0;
+    text-align: center;
+}
+#subscriptions .card {
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+#subscriptions .card:hover {
+    transform: translateY(-5px);
+}
+#subscriptions .btn {
+    background-color: var(--mg);
+    color: var(--light);
+    font-weight: 600;
+}
+#subscriptions .btn:hover {
+    background-color: var(--dg);
+}
+
+#farms {
+    background-color: var(--light);
+    padding: 5rem 0;
+}
+#farms h2 {
+    color: var(--dark);
+    font-weight: 700;
+}
+#farms .card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(42, 23, 14, 0.1);
+}
+#farms .card-title {
+    color: var(--dg);
+    font-weight: 700;
+}
+#farms .card-text {
+    color: rgba(42, 23, 14, 0.8);
+    font-size: 0.9rem;
+}
+
+#qna {
+    padding: 5rem 0;
+    background-color: var(--light);
+}
+#qna h2 {
+    color: var(--dark);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+#qna .accordion-button {
+    background-color: var(--light);
+    font-weight: 600;
+    color: var(--dark);
+}
+#qna .accordion-button:not(.collapsed) {
+    color: var(--dg);
+    background-color: rgba(98, 116, 37, 0.1);
+}
+
+#registration {
+    background-color: var(--light);
+    padding: 5rem 0;
+}
+#registration h2 {
+    color: var(--dark);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+#registration form {
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(42, 23, 14, 0.1);
+    padding: 2rem;
+}
+#registration .btn {
+    background-color: var(--dg);
+    border: none;
+}
+#registration .btn:hover {
+    background-color: var(--lg);
+}
+
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+footer a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: var(--mg);
+}
+footer .btn-outline-light {
+    border-color: var(--mg);
+    color: var(--light);
+}
+footer .btn-outline-light:hover {
+    background-color: var(--mg);
+    color: var(--dark);
+}
